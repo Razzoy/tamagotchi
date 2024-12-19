@@ -1,9 +1,33 @@
 body{
     background-color: #313131;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #riveCanvas {
-    width: 500px;
-    height: 500px;
+    width: 750px;
+    height: 750px;
     margin: 0 auto;
+}
+
+.buttonContainer{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+    width: 100%;
+    padding-left: 25rem;
+}
+
+button{
+padding: 1rem;
+width: 5rem;
+border-radius: 1rem;
+font-size: 1rem;
+border: none;
+}
+
+button:hover{
+    cursor: pointer;
 }
