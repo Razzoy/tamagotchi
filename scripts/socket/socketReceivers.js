@@ -1,5 +1,5 @@
 import { ioSocket } from "./socketController.js";
-import { hp, isEating, isAngry} from "../riveController.js"
+import { hp, isEating, isAngry, isHappy} from "../riveController.js"
 
 /* This file contains all the socket.io receivers.
  * That means everything the server emits to the client should be put in here. When the server emits (sends) a message
@@ -18,6 +18,7 @@ console.log('status', data);
   
 hp.value = data.health;
 isAngry.value = data.angryness;
+isHappy.value = data.happyness;
 }); 
 
 ioSocket.on('feeding', (data) => {
