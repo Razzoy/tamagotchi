@@ -2,7 +2,7 @@ let jump;
 
 const riveInstance = new rive.Rive({
 
-    src: "../assets/pinguin.riv",
+    src: "../assets/penguin.riv",
     canvas: document.getElementById('riveCanvas'),
     autoplay: true,
     stateMachines: 'controller',
@@ -11,8 +11,8 @@ const riveInstance = new rive.Rive({
 
         let controller_inputs = riveInstance.stateMachineInputs('controller');
         console.log("Controller", controller_inputs);
-        jump = controller_inputs.find((item) => item.name === 'jump');
+        play = controller_inputs.find((item) => item.name === 'play');
     }
 });
 
-export {jump};
+export {play};
