@@ -23,7 +23,7 @@ const riveInstance = new rive.Rive({
         isEating = controller_inputs.find((item) => item.name === 'Feed');
 
         isAngry = controller_inputs.find((item) => item.name === 'Angry');
-        playFall = controller_inputs.find((item) => item.name === 'Play to death');
+        playFall = controller_inputs.find((item) => item.name === 'Fall');
 
         //HealthBar
         let health_inputs = riveInstance.stateMachineInputs('healthBar');

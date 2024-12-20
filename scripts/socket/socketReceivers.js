@@ -21,6 +21,7 @@ isAngry.value = data.angryness;
 isHappy.value = data.happyness;
 }); 
 
+
 ioSocket.on('feeding', (data) => {
   isEating.fire();
 })

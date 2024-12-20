@@ -1,4 +1,4 @@
-import { play, isEating, playFall } from "./riveController.js";
+import { play, isEating, playFall, hp } from "./riveController.js";
 import { socket } from "./socket/socketController.js";
 
 let playButton = document.getElementById('playButton');
@@ -20,6 +20,7 @@ const jumpFail = () => {
 
 const jumping = () => {
     socket.emit("check-hp", {}, (response) => {
+        hp.value = response.health;
         if (response.health <= 0) {
             jumpFail();
         } else {
